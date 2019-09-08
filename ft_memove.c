@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 22:34:56 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/08 20:50:35 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/08 20:50:41 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
 #include <string.h>
 
-int main()
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char 	*s = "    1999999999999999";
-	printf("%i\n", ft_atoi(s));
-	return (0);
+
 }

@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 22:34:56 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/08 20:52:53 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/08 20:52:58 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include <string.h>
-
-int main()
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	char 	*s = "    1999999999999999";
-	printf("%i\n", ft_atoi(s));
-	return (0);
+
 }

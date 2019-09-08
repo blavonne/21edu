@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 22:34:56 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/08 20:49:42 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/08 20:49:50 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
 #include <string.h>
 
-int main()
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char 	*s = "    1999999999999999";
-	printf("%i\n", ft_atoi(s));
-	return (0);
+
 }

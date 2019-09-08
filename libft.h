@@ -6,12 +6,14 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:52:03 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 19:16:52 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/08 22:29:59 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

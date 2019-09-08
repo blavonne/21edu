@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 22:34:56 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/08 20:27:17 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/08 20:28:13 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include <string.h>
-
-int main()
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	char 	*s = "    1999999999999999";
-	printf("%i\n", ft_atoi(s));
+	int 	i;
+
+	i = 0;
+	while (s1[i])
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
 	return (0);
 }

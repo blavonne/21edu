@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 22:34:56 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/08 20:55:03 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/08 22:06:52 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include <string.h>
-
-int main()
+int		ft_toupper(int c)
 {
-	char 	*s = "    1999999999999999";
-	printf("%i\n", ft_atoi(s));
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c -= 32);
+	return (c);
 }
