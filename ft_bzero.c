@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:48:17 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 20:48:17 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/10 19:14:05 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	char	*str;
+	int		i;
 
+	str = s;
+	i = 0;
+	if (n == 0)
+		return ;
+	while (i < (int)n)
+	{
+		str[i] = '0';
+		i++;
+	}
 }
