@@ -28,9 +28,9 @@ static int		ft_isnum(char c)
 
 int				ft_atoi(const char *str)
 {
-	unsigned long	toi;
-		/* предел 4 млрд - превышает инту в два раза, защита от переполнения */
-	unsigned long	max_div_ten;
+	long long	toi;
+		/* предел 9 млрд - превышает инту в два раза, защита от переполнения */
+	long long	max_div_ten;
 		/* необходимо отсечь конец макс-числа, т.к. от него зависит результат:
 		 * если на конце 8, то число отрицательное, вернуть 0;
 		 * если на конце 7, то число положительное, вернуть -1; */
@@ -38,10 +38,8 @@ int				ft_atoi(const char *str)
 	int				sign;
 
 	toi = 0;
-	max_div_ten = (unsigned long)(LONG_MAX / 10);
-		/* л_макс = инт_макс, максимум 2 млрд, но строго определено
-		 * кол-во байт (4 байта);
-		 * отсекаем один символ */
+	max_div_ten = (long long)(LLONG_MAX / 10);
+		/* отсекаем один символ */
 	i = 0;
 	while (ft_isspace(str[i]))
 		i++;
