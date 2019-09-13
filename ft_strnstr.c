@@ -6,47 +6,36 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:53:18 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/13 20:11:31 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/14 01:47:00 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-static int	find(const char *str, const char *find, size_t i, size_t len)
-{
-	size_t	j;
-	size_t	l;
-
-	j = 0;
-	l = 0;
-	while (str[j++] == find[l++] && i < len)
-		i++;
-	if (!find[l])
-		return (1);
-	return (0);
-}
-
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char	*begin;
-	size_t		i;
+	char	*begin;
+	char	*tmp;
 
-	i = 0;
-	if (!needle[i])
+	tmp = (char *)needle;
+	if (!*needle)
 		return ((char *)haystack);
-	while (i < len)
+	while (len > 0 && *haystack)
 	{
-		if (haystack[i] == *needle)
+		if (*haystack == *needle)
 		{
-			while (haystack[i] == *needle && i < len)
-				i++;
-			begin = &haystack[i - 1];
-			if (find(begin, needle, i, len))
-				return ((char *)begin);
-			else
-				return (0);
+			begin = (char *)haystack;
+			while (*haystack++ == *needle++ && len--)
+				if (!*needle)
+					return ((char *)begin);
+			if (needle + 1 && needle + 1 != haystack + 1)
+			{
+				haystack = begin;
+				needle = tmp;
+			}
 		}
-		i++;
+		len--;
+		haystack++;
 	}
 	return (NULL);
 }

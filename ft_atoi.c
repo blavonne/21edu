@@ -6,15 +6,16 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:32:19 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/12 21:28:37 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/14 02:17:09 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 static int		ft_isspace(char c)
 {
-	if (c >= 0 && c <= 32)
-		return (1);
-	return (0);
+	return (c == '\t' || c == '\n' ||
+			c == '\v' || c == '\f' || c == '\r' || c == ' ' ? 1 : 0);
 }
 
 static int		ft_isnum(char c)
