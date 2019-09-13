@@ -18,11 +18,11 @@ char		*ft_strrchr(const char *s, int c)
 
 	i = ft_strlen(s) - 1;
 	if (c == '\0')
-		return (&s[ft_strlen(s)]);
+		return ((char *)&s[ft_strlen(s)]);
 	while (i > -1)
 	{
 		if (s[i] == (char)c)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (NULL);
