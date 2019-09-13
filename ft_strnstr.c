@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:53:18 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/12 22:10:20 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/13 20:15:04 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	find(const char *str, const char *find, size_t i, size_t len)
 	l = 0;
 	while (str[j++] == find[l++] && i < len)
 		i++;
-	if (!str[j])
+	if (!find[l])
 		return (1);
 	return (0);
 }
