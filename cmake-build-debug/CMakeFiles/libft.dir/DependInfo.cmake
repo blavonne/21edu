@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "W:/CLionProjects/21edu/ft_memcpy.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_memcpy.c.obj"
   "W:/CLionProjects/21edu/ft_memdel.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_memdel.c.obj"
   "W:/CLionProjects/21edu/ft_memmove.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_memmove.c.obj"
+  "W:/CLionProjects/21edu/ft_memove.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_memove.c.obj"
   "W:/CLionProjects/21edu/ft_memset.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_memset.c.obj"
   "W:/CLionProjects/21edu/ft_putchar.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_putchar.c.obj"
   "W:/CLionProjects/21edu/ft_putchar_fd.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_putchar_fd.c.obj"
@@ -57,7 +58,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "W:/CLionProjects/21edu/ft_tolower.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_tolower.c.obj"
   "W:/CLionProjects/21edu/ft_toupper.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/ft_toupper.c.obj"
   "W:/CLionProjects/21edu/main.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/main.c.obj"
-  "W:/CLionProjects/21edu/strtol_lib.c" "W:/CLionProjects/21edu/cmake-build-debug/CMakeFiles/libft.dir/strtol_lib.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

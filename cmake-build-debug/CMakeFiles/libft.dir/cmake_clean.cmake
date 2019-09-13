@@ -52,7 +52,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_toupper.c.obj"
   "CMakeFiles/libft.dir/ft_itoa.c.obj"
   "CMakeFiles/libft.dir/ft_memcpy.c.obj"
-  "CMakeFiles/libft.dir/strtol_lib.c.obj"
+  "CMakeFiles/libft.dir/ft_memove.c.obj"
   "libft.pdb"
   "libft.exe"
   "libft.exe.manifest"

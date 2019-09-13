@@ -119,6 +119,9 @@
 		<Unit filename="W:/CLionProjects/21edu/ft_memmove.c">
 			<Option target="libft"/>
 		</Unit>
+		<Unit filename="W:/CLionProjects/21edu/ft_memove.c">
+			<Option target="libft"/>
+		</Unit>
 		<Unit filename="W:/CLionProjects/21edu/ft_memset.c">
 			<Option target="libft"/>
 		</Unit>
@@ -234,9 +237,6 @@
 			<Option target="libft"/>
 		</Unit>
 		<Unit filename="W:/CLionProjects/21edu/main.c">
-			<Option target="libft"/>
-		</Unit>
-		<Unit filename="W:/CLionProjects/21edu/strtol_lib.c">
 			<Option target="libft"/>
 		</Unit>
 		<Unit filename="W:/CLionProjects/21edu/CMakeLists.txt">

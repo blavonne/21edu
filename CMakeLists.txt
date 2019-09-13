@@ -9,4 +9,4 @@ add_executable(libft main.c libft.h ft_strlen.c ft_strdup.c ft_strcpy.c ft_strnc
         ft_memmove.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c
         ft_putstr_fd.c ft_strchr.c ft_strclr.c ft_strdel.c ft_strequ.c ft_strnequ.c ft_striter.c ft_striteri.c
         ft_strjoin.c ft_strmap.c ft_strmapi.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c
-        ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_itoa.c ft_memcpy.c strtol_lib.c)
+        ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_itoa.c ft_memcpy.c ft_memove.c)

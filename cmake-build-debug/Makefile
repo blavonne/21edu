@@ -527,6 +527,33 @@ ft_memmove.c.s:
 	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/ft_memmove.c.s
 .PHONY : ft_memmove.c.s
 
+ft_memove.obj: ft_memove.c.obj
+
+.PHONY : ft_memove.obj
+
+# target to build an object file
+ft_memove.c.obj:
+	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/ft_memove.c.obj
+.PHONY : ft_memove.c.obj
+
+ft_memove.i: ft_memove.c.i
+
+.PHONY : ft_memove.i
+
+# target to preprocess a source file
+ft_memove.c.i:
+	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/ft_memove.c.i
+.PHONY : ft_memove.c.i
+
+ft_memove.s: ft_memove.c.s
+
+.PHONY : ft_memove.s
+
+# target to generate assembly for a file
+ft_memove.c.s:
+	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/ft_memove.c.s
+.PHONY : ft_memove.c.s
+
 ft_memset.obj: ft_memset.c.obj
 
 .PHONY : ft_memset.obj
@@ -1553,33 +1580,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/main.c.s
 .PHONY : main.c.s
 
-strtol_lib.obj: strtol_lib.c.obj
-
-.PHONY : strtol_lib.obj
-
-# target to build an object file
-strtol_lib.c.obj:
-	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/strtol_lib.c.obj
-.PHONY : strtol_lib.c.obj
-
-strtol_lib.i: strtol_lib.c.i
-
-.PHONY : strtol_lib.i
-
-# target to preprocess a source file
-strtol_lib.c.i:
-	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/strtol_lib.c.i
-.PHONY : strtol_lib.c.i
-
-strtol_lib.s: strtol_lib.c.s
-
-.PHONY : strtol_lib.s
-
-# target to generate assembly for a file
-strtol_lib.c.s:
-	$(MAKE) -f CMakeFiles\libft.dir\build.make CMakeFiles/libft.dir/strtol_lib.c.s
-.PHONY : strtol_lib.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -1634,6 +1634,9 @@ help:
 	@echo ... ft_memmove.obj
 	@echo ... ft_memmove.i
 	@echo ... ft_memmove.s
+	@echo ... ft_memove.obj
+	@echo ... ft_memove.i
+	@echo ... ft_memove.s
 	@echo ... ft_memset.obj
 	@echo ... ft_memset.i
 	@echo ... ft_memset.s
@@ -1748,9 +1751,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... strtol_lib.obj
-	@echo ... strtol_lib.i
-	@echo ... strtol_lib.s
 .PHONY : help
 
 

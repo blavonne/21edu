@@ -745,18 +745,18 @@ CMakeFiles/libft.dir/ft_memcpy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libft.dir/ft_memcpy.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S W:\CLionProjects\21edu\ft_memcpy.c -o CMakeFiles\libft.dir\ft_memcpy.c.s
 
-CMakeFiles/libft.dir/strtol_lib.c.obj: CMakeFiles/libft.dir/flags.make
-CMakeFiles/libft.dir/strtol_lib.c.obj: ../strtol_lib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=W:\CLionProjects\21edu\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/libft.dir/strtol_lib.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libft.dir\strtol_lib.c.obj   -c W:\CLionProjects\21edu\strtol_lib.c
+CMakeFiles/libft.dir/ft_memove.c.obj: CMakeFiles/libft.dir/flags.make
+CMakeFiles/libft.dir/ft_memove.c.obj: ../ft_memove.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=W:\CLionProjects\21edu\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/libft.dir/ft_memove.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libft.dir\ft_memove.c.obj   -c W:\CLionProjects\21edu\ft_memove.c
 
-CMakeFiles/libft.dir/strtol_lib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libft.dir/strtol_lib.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E W:\CLionProjects\21edu\strtol_lib.c > CMakeFiles\libft.dir\strtol_lib.c.i
+CMakeFiles/libft.dir/ft_memove.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libft.dir/ft_memove.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E W:\CLionProjects\21edu\ft_memove.c > CMakeFiles\libft.dir\ft_memove.c.i
 
-CMakeFiles/libft.dir/strtol_lib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libft.dir/strtol_lib.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S W:\CLionProjects\21edu\strtol_lib.c -o CMakeFiles\libft.dir\strtol_lib.c.s
+CMakeFiles/libft.dir/ft_memove.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libft.dir/ft_memove.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S W:\CLionProjects\21edu\ft_memove.c -o CMakeFiles\libft.dir\ft_memove.c.s
 
 # Object files for target libft
 libft_OBJECTS = \
@@ -813,7 +813,7 @@ libft_OBJECTS = \
 "CMakeFiles/libft.dir/ft_toupper.c.obj" \
 "CMakeFiles/libft.dir/ft_itoa.c.obj" \
 "CMakeFiles/libft.dir/ft_memcpy.c.obj" \
-"CMakeFiles/libft.dir/strtol_lib.c.obj"
+"CMakeFiles/libft.dir/ft_memove.c.obj"
 
 # External object files for target libft
 libft_EXTERNAL_OBJECTS =
@@ -871,7 +871,7 @@ libft.exe: CMakeFiles/libft.dir/ft_tolower.c.obj
 libft.exe: CMakeFiles/libft.dir/ft_toupper.c.obj
 libft.exe: CMakeFiles/libft.dir/ft_itoa.c.obj
 libft.exe: CMakeFiles/libft.dir/ft_memcpy.c.obj
-libft.exe: CMakeFiles/libft.dir/strtol_lib.c.obj
+libft.exe: CMakeFiles/libft.dir/ft_memove.c.obj
 libft.exe: CMakeFiles/libft.dir/build.make
 libft.exe: CMakeFiles/libft.dir/linklibs.rsp
 libft.exe: CMakeFiles/libft.dir/objects1.rsp
