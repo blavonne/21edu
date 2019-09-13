@@ -6,13 +6,13 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 21:46:25 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/07 21:50:04 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/12 22:20:38 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (src[i])
@@ -21,5 +21,5 @@ char	*ft_strcpy(char *dst, const char *src)
 		i++;
 	}
 	dst[i] = '\0';
-	return(dst);
+	return (dst);
 }

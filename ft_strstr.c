@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:52:53 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/11 22:51:21 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/12 21:40:14 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,16 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	{
 		if (*haystack == *needle)
 		{
+			while (*haystack == *needle)
+				haystack++;
+			haystack--;
 			begin = haystack;
 			while (*haystack == *needle)
 			{
 				haystack++;
 				needle++;
 				if (!*needle)
-					return((char *)begin);
+					return ((char *)begin);
 			}
 			if (needle + 1 && needle + 1 != haystack + 1)
 				return (NULL);

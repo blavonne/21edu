@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:52:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/11 22:51:21 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/12 21:52:44 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 #include <string.h>
 #include <stdlib.h>
 #include <limits.h>
+#include "libft.h"
+
 
 int main()
 {
-	char s1[] = "qt";
-	char	s[] = "qwerety";
-
-	printf("%s\n", ft_strstr(s, s1));
-	printf("%s\n", strstr(s, s1));
+	char s[] = "qweerty";
+	char s2[] = "we";
+	printf("%s\n", ft_strstr(s, s2));
+	printf("%s\n", strstr(s, s2));
+	printf("%s\n", ft_strnstr(s, s2, 2));
+	printf("%s\n", strnstr(s, s2, 2));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:32:19 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/11 22:51:21 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/12 21:28:37 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int				ft_atoi(const char *str)
 	while (ft_isnum(str[i]))
 	{
 		if (sign == 1 &&\
-		(toi > max_div_ten ||(toi == max_div_ten && (str[i] - '0') > 7)))
+		(toi > max_div_ten || (toi == max_div_ten && (str[i] - '0') > 7)))
 			return (-1);
 		else if (sign == -1 &&\
 		(toi > max_div_ten || (toi == max_div_ten && (str[i] - '0') > 8)))
