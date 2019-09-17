@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 18:22:36 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/14 19:11:26 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/17 20:34:36 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/17 20:39:07 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char	*buf;
-	size_t	i;
+	t_list	*list;
+	t_list	*next_list;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	buf = ft_strnew(ft_strlen(s));
-	if (buf)
+	list = *alst;
+	while (list)
 	{
-		while (s[i])
-		{
-			buf[i] = f(s[i]);
-			i++;
-		}
+		next_list = list->next;
+		del(list->content, list->content_size);
+		free(list);
+		list = next_list;
 	}
-	else
-		return (NULL);
-	return (buf);
+	*alst = NULL;
 }

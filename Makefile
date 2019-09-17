@@ -6,7 +6,7 @@
 #    By: blavonne <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/11 18:43:11 by blavonne          #+#    #+#              #
-#    Updated: 2019/09/13 19:58:40 by blavonne         ###   ########.fr        #
+#    Updated: 2019/09/17 17:19:58 by blavonne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,3 +25,5 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 re: fclean all
+cp:
+	cp -Ra ft* ../../42FileChecker/libft/

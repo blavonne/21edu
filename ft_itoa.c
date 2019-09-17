@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:47:20 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/16 20:30:47 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/17 22:28:08 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ static int	ft_alloc(int n)
 static char	*ft_reverse(char *str)
 {
 	char	c;
-	int 	begin;
-	int 	end;
+	int		begin;
+	int		end;
 
 	begin = 0;
 	end = ft_strlen(str) - 1;
@@ -48,13 +48,16 @@ static char	*ft_reverse(char *str)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char			*buf;
 	int				i;
 	unsigned int	res;
 
-	n > 0 ? (res = n) : (res = -n);
+	if (n >= 0)
+		res = n;
+	else
+		res = -n;
 	i = 0;
 	if (!(buf = (char *)malloc(sizeof(char) * ft_alloc(n) + 1)))
 		return (NULL);

@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 18:22:36 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/14 19:11:26 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/17 20:56:09 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/17 22:00:18 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*buf;
-	size_t	i;
+	t_list	*head;
+	t_list	*list;
 
-	i = 0;
-	if (!s)
+	if (!lst)
 		return (NULL);
-	buf = ft_strnew(ft_strlen(s));
-	if (buf)
+	list = f(lst);
+	head = list;
+	while (lst->next)
 	{
-		while (s[i])
-		{
-			buf[i] = f(s[i]);
-			i++;
-		}
+		lst = lst->next;
+		list->next = f(lst);
+		list = list->next;
 	}
-	else
-		return (NULL);
-	return (buf);
+	return (head);
 }

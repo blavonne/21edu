@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int 	size;
-	char 	*cat;
+	int		size;
+	char	*cat;
 
 	if (!s1 || !s2)
 		return (NULL);

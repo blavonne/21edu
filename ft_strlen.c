@@ -6,13 +6,15 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 21:08:26 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/07 21:08:31 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/17 23:01:00 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
+#include "libft.h"
+
+size_t		ft_strlen(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
