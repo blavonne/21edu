@@ -6,7 +6,7 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:52:03 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/17 23:01:34 by blavonne         ###   ########.fr       */
+/*   Updated: 2019/09/18 19:25:21 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <stdio.h>
+
+/*
+** 1st part.................................................................
+*/
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -47,6 +52,10 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
+/*
+** 2nd part....................................................................
+*/
+
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -72,6 +81,10 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+/*
+** bonus-part..................................................................
+*/
+
 typedef struct		s_list
 {
 	void			*content;
@@ -85,4 +98,15 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** extra part...................................................................
+*/
+
+void				ft_lstadd_back(t_list **alst, t_list *new);
+int					ft_isspace(int c);
+void				ft_swap(int *a, int *b);
+int					ft_sqrt(int nb);
+int					ft_pow(int base, int power);
+
 #endif

@@ -16,7 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*buf;
 
-	if (!(buf = ft_strnew(len)) || !s)
+	if (!s || !(buf = ft_strnew(len)))
 		return (NULL);
 	if (!(buf = ft_strncpy(buf, &s[start], len)))
 		return (NULL);

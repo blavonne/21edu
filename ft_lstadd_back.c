@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 18:33:49 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/13 23:56:09 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/18 14:58:37 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/18 14:58:37 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t	i;
-
-	i = 0;
-	while (src[i] && i < len)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	if (!alst || !new)
+		return ;
+	while ((*alst)->next)
+		(*alst) = (*alst)->next;
+	(*alst)->next = new;
 }

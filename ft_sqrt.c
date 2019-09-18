@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 18:33:49 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/13 23:56:09 by blavonne         ###   ########.fr       */
+/*   Created: 2019/09/03 10:37:01 by blavonne          #+#    #+#             */
+/*   Updated: 2019/09/03 14:03:49 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int		ft_sqrt(int nb)
 {
-	size_t	i;
+	int		res;
 
-	i = 0;
-	while (src[i] && i < len)
+	res = 0;
+	if (nb < 0)
+		return (0);
+	while ((res * res) <= nb && res * res >= 0)
 	{
-		dst[i] = src[i];
-		i++;
+		if ((res * res) == nb)
+			return (res);
+		res++;
 	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (0);
 }
