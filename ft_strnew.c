@@ -16,6 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char	*obj;
 
+	if (size + 1 == 0)
+		return (NULL);
 	obj = 0;
 	if (!(obj = (char *)malloc(size + 1)))
 		return (NULL);

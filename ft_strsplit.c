@@ -76,7 +76,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = ft_count_words((char *)s, c);
-	if (!(buf = (char **)malloc(sizeof(char *) * words + 1)))
+	if (!(buf = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
 	if (ft_push_in_arr(buf, (char *)s, c, words))
 		buf[words] = NULL;

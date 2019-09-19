@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static void	ft_putnbr_rec(unsigned int nb)
 {
