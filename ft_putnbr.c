@@ -14,7 +14,7 @@
 
 static void	ft_putnbr_rec(unsigned int nb)
 {
-	char	c;
+	int	c;
 
 	if (nb > 9)
 		ft_putnbr_rec(nb / 10);
