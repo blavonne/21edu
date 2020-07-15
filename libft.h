@@ -108,5 +108,7 @@ int					ft_isspace(int c);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					ft_pow(int base, int power);
+unsigned char		swap_bits(unsigned char octet);
+unsigned char		reverse_bits(unsigned char octet);
 
 #endif

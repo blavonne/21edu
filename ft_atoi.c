@@ -6,11 +6,9 @@
 /*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:32:19 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/14 02:17:09 by blavonne         ###   ########.fr       */
+/*   Updated: 2020/07/16 01:28:50 by null             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
 
 static int		ft_isspace(char c)
 {
