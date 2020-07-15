@@ -23,7 +23,7 @@ SRC = ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c\
 	   ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c\
 	   ft_toupper.c ft_itoa.c ft_memcpy.c ft_lstnew.c ft_lstdelone.c\
 	   ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_lstadd_back.c\
-	   ft_isspace.c ft_swap.c ft_sqrt.c ft_pow.c
+	   ft_isspace.c ft_swap.c ft_sqrt.c ft_pow.c ft_reverse_bits.c
 OS = $(SRC:%.c=%.o)
 F = -Wall -Werror -Wextra -c
 all: $(NAME)
