@@ -38,5 +38,3 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 re: fclean all
-cp:
-	cp -Ra libft.h Makefile ft* ../../42FileChecker/libft/
