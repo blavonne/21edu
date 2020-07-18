@@ -31,8 +31,9 @@ all: $(NAME)
 
 $(NAME): $(OS)
 	ar rcs $(NAME) $(OS)
+	ranlib $(NAME)
 %.o: %.c
-	gcc -I libft.h $F $< -o $@
+	gcc -I ./ $F $< -o $@
 clean:
 	rm -rf $(OS)
 fclean: clean
