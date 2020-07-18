@@ -12,21 +12,22 @@
 
 #include "libft.h"
 
+char		toa[] = "0123456789abcdef";
+
 static int	ft_alloc(int n)
 {
 	int		count;
-	int		size;
 
-	count = 0;
+	count = 1;
 	while (n / 10)
 	{
 		count++;
 		n = n / 10;
 	}
 	if (n < 0)
-		return (size = count + 1 + 1);
+		return (count + 1);
 	else
-		return (size = count + 1);
+		return (count);
 }
 
 static char	*ft_reverse(char *str)
@@ -36,7 +37,7 @@ static char	*ft_reverse(char *str)
 	int		end;
 
 	begin = 0;
-	end = ft_strlen(str) - 1;
+	end = (int)ft_strlen(str) - 1;
 	while (begin < end)
 	{
 		c = str[begin];
@@ -48,27 +49,33 @@ static char	*ft_reverse(char *str)
 	return (str);
 }
 
+static char	radix(int res)
+{
+	int 	index;
+
+	index = res % 10;
+	return (toa[index]);
+}
+
 char		*ft_itoa(int n)
 {
-	char			*buf;
-	int				i;
-	unsigned int	res;
+	char	*buf;
+	int		i;
+	int		res;
 
 	if (n >= 0)
 		res = n;
 	else
 		res = -n;
 	i = 0;
-	if (!(buf = (char *)malloc(sizeof(char) * ft_alloc(n) + 1)))
+	if (!(buf = (char *)malloc(sizeof(char) * (size_t)ft_alloc(n) + 1)))
 		return (NULL);
-	while (res / 10)
+	while (res)
 	{
-		buf[i] = res % 10 + '0';
+		buf[i] = radix(res);
 		res /= 10;
 		i++;
 	}
-	if (!(res / 10))
-		buf[i++] = res + '0';
 	if (n < 0)
 		buf[i++] = '-';
 	buf[i] = '\0';
