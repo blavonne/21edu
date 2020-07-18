@@ -19,7 +19,7 @@ static int	ft_nbr_len(int n)
 	int		count;
 
 	count = 1;
-	while (n / 10)
+	while (n)
 	{
 		count++;
 		n = n / 10;
