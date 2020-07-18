@@ -14,7 +14,7 @@
 
 char		toa[] = "0123456789abcdef";
 
-static int	ft_alloc(int n)
+static int	ft_nbr_len(int n)
 {
 	int		count;
 
@@ -33,11 +33,11 @@ static int	ft_alloc(int n)
 static char	*ft_reverse(char *str)
 {
 	char	c;
-	int		begin;
-	int		end;
+	size_t	begin;
+	size_t	end;
 
 	begin = 0;
-	end = (int)ft_strlen(str) - 1;
+	end = ft_strlen(str) - 1;
 	while (begin < end)
 	{
 		c = str[begin];
@@ -68,7 +68,7 @@ char		*ft_itoa(int n)
 	else
 		res = -n;
 	i = 0;
-	if (!(buf = (char *)malloc(sizeof(char) * (size_t)ft_alloc(n) + 1)))
+	if (!(buf = (char *)malloc(sizeof(char) * (size_t)ft_nbr_len(n) + 1)))
 		return (NULL);
 	while (res)
 	{
