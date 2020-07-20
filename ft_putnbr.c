@@ -12,23 +12,25 @@
 
 #include "libft.h"
 
-static void	ft_putnbr_rec(unsigned int nb)
+static void	ft_putnbr_rec(long long int nb)
 {
-	int	c;
+	int		c;
 
 	if (nb > 9)
 		ft_putnbr_rec(nb / 10);
-	c = nb % 10 + '0';
+	nb = nb % 10;
+	c = (int)nb + '0';
 	write(1, &c, 1);
 }
 
 void		ft_putnbr(int n)
 {
-	unsigned int	nb;
+	long long int	nb;
 
 	if (n < 0)
 	{
-		nb = -n;
+		nb = n;
+		nb = -nb;
 		ft_putchar('-');
 	}
 	else
