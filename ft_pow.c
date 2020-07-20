@@ -16,8 +16,14 @@ int		ft_pow(int base, int power)
 	int		res;
 
 	i = 0;
-	res = base;
-	while (i++ < power)
-		res = res * base;
+	res = 1;
+	if (!power)
+		return (1);
+	while (i < power)
+	{
+		res *= base;
+		i++;
+	}
+
 	return (res);
 }
