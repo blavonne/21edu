@@ -1,83 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_iu.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:47:20 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/17 22:28:08 by blavonne         ###   ########.fr       */
+/*   Created: 2020/07/23 03:43:59 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:54:15 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		toa[] = "0123456789abcdef";
-
-static int	ft_nbr_len(int n)
+char	*ft_itoa(int decimal)
 {
-	int		count;
+	int		len;
+	int		temp;
+	char	*res;
+	int		index;
 
-	count = 1;
-	while (n)
-	{
-		count++;
-		n = n / 10;
-	}
-	if (n < 0)
-		return (count + 1);
-	else
-		return (count);
-}
-
-static char	*ft_reverse(char *str)
-{
-	char	c;
-	size_t	begin;
-	size_t	end;
-
-	begin = 0;
-	end = ft_strlen(str) - 1;
-	while (begin < end)
-	{
-		c = str[begin];
-		str[begin] = str[end];
-		str[end] = c;
-		begin++;
-		end--;
-	}
-	return (str);
-}
-
-static char	radix(int res)
-{
-	int 	index;
-
-	index = res % 10;
-	return (toa[index]);
-}
-
-char		*ft_itoa(int n)
-{
-	char	*buf;
-	int		i;
-	int		res;
-
-	if (n >= 0)
-		res = n;
-	else
-		res = -n;
-	i = 0;
-	if (!(buf = (char *)malloc(sizeof(char) * (size_t)ft_nbr_len(n) + 1)))
+	len = 1;
+	temp = decimal;
+	while ((temp = temp / 10))
+		len++;
+	decimal < 0 ? len++ : 0;
+	if (!(res = ft_strnew(len)))
 		return (NULL);
-	while (res)
+	decimal < 0 ? res[0] = '-' : 0;
+	while (len--)
 	{
-		buf[i] = radix(res);
-		res /= 10;
-		i++;
+		index = ft_abs(decimal % 10);
+		res[len] = RADIX[index];
+		decimal /= 10;
 	}
-	if (n < 0)
-		buf[i++] = '-';
-	buf[i] = '\0';
-	return (ft_reverse(buf));
+	return (res);
+}
+
+char	*ft_itoa_u(unsigned int decimal, int base)
+{
+	int				len;
+	unsigned int	temp;
+	char			*res;
+	int				index;
+
+	len = 1;
+	temp = decimal;
+	while ((temp = temp / base))
+		len++;
+	if (!(res = ft_strnew(len)))
+		return (NULL);
+	while (len--)
+	{
+		index = ft_abs((int)(decimal % base));
+		res[len] = RADIX[index];
+		decimal /= base;
+	}
+	return (res);
 }
