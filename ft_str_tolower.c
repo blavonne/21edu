@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_str_tolower.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 17:45:23 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/16 18:01:06 by blavonne         ###   ########.fr       */
+/*   Created: 2020/07/23 03:13:53 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:56:15 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+void	ft_str_tolower(char *str)
 {
-	size_t	i;
+	int		i;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i])
+	while (str && str[i])
 	{
-		if (s1[i] != s2[i])
-			return (0);
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = (char)ft_tolower(str[i]);
 		i++;
 	}
-	if ((char)s1[i] == '\0' && (char)s2[i] == '\0')
-		return (1);
-	return (0);
 }

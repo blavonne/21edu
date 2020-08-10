@@ -13,9 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
+
+# define RADIX	"01234567890abcdef"
 
 /*
 ** 1st part.................................................................
@@ -107,8 +109,16 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 int					ft_isspace(int c);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
-int					ft_pow(int base, int power);
+double				ft_pow(double base, int power);
 unsigned char		swap_bits(unsigned char octet);
 unsigned char		reverse_bits(unsigned char octet);
+int					ft_abs(int nbr);
+char				*ft_itoa_u(unsigned int decimal, int base);
+char				*itoa_ll(long long int decimal);
+char				*itoa_llu(unsigned long long int decimal, int base);
+char				*itoa_l(long decimal);
+char				*itoa_lu(unsigned long int decimal, int base);
+void				ft_str_tolower(char *str);
+void				ft_str_toupper(char *str);
 
 #endif

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 19:19:06 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/08 19:19:25 by blavonne         ###   ########.fr       */
+/*   Created: 2020/08/06 17:56:33 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:56:35 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/18 19:19:01 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/18 20:00:53 by blavonne         ###   ########.fr       */
+/*   Created: 2020/08/06 17:55:36 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:55:39 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_pow(int base, int power)
+double		ft_pow(double basis, int exponent)
 {
-	int		i;
-	int		res;
+	double			base;
+	long long int	exp;
 
-	i = 0;
-	res = 1;
-	if (!power)
+	if (exponent == 0)
 		return (1);
-	while (i < power)
-	{
-		res *= base;
-		i++;
-	}
-
-	return (res);
+	base = basis;
+	exp = exponent;
+	exp = exp < 0 ? -exp : exp;
+	while (--exp)
+		basis *= base;
+	if (exponent < 0)
+		return (1. / basis);
+	else
+		return (basis);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 20:48:17 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/14 02:25:56 by blavonne         ###   ########.fr       */
+/*   Created: 2020/07/23 03:06:35 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:54:01 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 18:58:19 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/17 19:00:30 by blavonne         ###   ########.fr       */
+/*   Created: 2020/08/06 17:56:02 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:56:06 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	while (s && *s)
-		ft_putchar_fd(*s++, fd);
+	if (s && *s)
+		write(fd, s, ft_strlen(s));
 }

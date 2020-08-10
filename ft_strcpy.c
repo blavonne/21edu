@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 21:46:25 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/12 22:20:38 by blavonne         ###   ########.fr       */
+/*   Created: 2020/08/06 17:56:51 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:56:53 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "printf.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

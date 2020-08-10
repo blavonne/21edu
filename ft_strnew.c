@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blavonne <blavonne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blavonne <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 18:03:52 by blavonne          #+#    #+#             */
-/*   Updated: 2019/09/14 18:08:11 by blavonne         ###   ########.fr       */
+/*   Created: 2020/07/23 03:17:13 by blavonne          #+#    #+#             */
+/*   Updated: 2020/08/06 17:57:24 by blavonne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 char	*ft_strnew(size_t size)
 {
