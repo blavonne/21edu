@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRC =	ft_abs.c\
+SRC = ft_abs.c\
 		ft_atoi.c\
 		ft_bzero.c\
 		ft_isalnum.c\
@@ -81,16 +81,20 @@ SRC =	ft_abs.c\
 		ft_swap_bits.c\
 		ft_tolower.c\
 		ft_toupper.c\
+
 OS = $(SRC:%.c=%.o)
 FLAGS = -Wall -Werror -Wextra
-all: $(NAME)
+INCLUDES = ./
 
-$(NAME): $(OS) libft.h
-	ar rcs $(NAME) $(OS)
-%.o: %.c
-	gcc -c -I ./ $(FLAGS) $< -o $@
+all: $(NAME)
+$(NAME): $(OS)
+	@ar rcs $(NAME) $(OS)
+%.o: %.c $(INCLUDES)libft.h
+	@gcc -c $< -o $@ -I $(INCLUDES) $(FLAGS)
 clean:
-	rm -rf $(OS)
+	@rm -rf $(OS)
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 re: fclean all
+
+.PHONY: all clean fclean re
