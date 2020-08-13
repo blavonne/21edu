@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 
-# define RADIX	"01234567890abcdef"
+# define RADIX	"0123456789abcdef"
 
 /*
 ** 1st part.................................................................
